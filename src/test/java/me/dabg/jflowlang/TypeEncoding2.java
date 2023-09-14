@@ -14,8 +14,8 @@ import static me.dabg.jflowlang.TypeEncoding1.γ_;
  * - f(r1, s2) = γ2
  * - f(r2, s2) = undefined
  *
- * Fluent API with a finite amount of possible calls.
- * Available calls amount is defined by function arity (2 in this case)
+ * Fluent API with a finite amount of possible calls (bounded size sets).
+ * Length of call chain is defined by function arity (2 in this case).
  * so...Fluent API is modeled as a function
  */
 public class TypeEncoding2 {

@@ -11,14 +11,20 @@ package me.dabg.jflowlang;
  * - g(γ2) = invalid
  *
  * In mathematics, a partial function f from a set X to a set Y
- * is a function from a subset S of X (possibly the whole X itself) to *
+ * is a function from a subset S of X (possibly the whole X itself) to Y
+ *
+ * Building blocks:
+ * 1 abstract class encodes a set, abstract subclasses represents its subsets
+ * 2 final classes are set members
+ * 3 subsets are encoded as static inner classes within the superset class, namespacing purpose.
+ *
  */
 public class TypeEncoding1 {
 
     // γ_ denotes the augmented set γ ∪ {¤}
     public static abstract class γ_ {
 
-        // ¤ represents an error value. Made package-private to split classes
+        // ¤ is an error type, returned when no transition is defined
         static abstract class ¤ extends γ_ {
             private ¤(){}
         }
